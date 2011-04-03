@@ -24,4 +24,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", '~> 2.5.0'
   s.add_development_dependency 'capybara', '~> 0.4.1'
   s.add_development_dependency 'dm-sqlite-adapter', '~> 1.1.0'
+  s.add_development_dependency 'dm-transactions', '~> 1.1.0'
+  s.add_development_dependency 'database_cleaner', '~> 0.6.6'
 end
