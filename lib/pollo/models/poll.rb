@@ -4,5 +4,7 @@ module Pollo
 
     property :id, Serial
     property :name, String, :required => true
+
+    has n, :questions
   end
 end
