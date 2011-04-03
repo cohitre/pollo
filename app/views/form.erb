@@ -1,0 +1,18 @@
+<div>
+  <form action="/" method="post">
+    <% @poll.questions.each do |question| %>
+      <fieldset>
+        <legend><%= question.text %></legend>
+        <% question.possible_answers.each do |answer| %>
+          <label for="question_<%= question.id %>_answer_<%= answer.id %>">
+            <%= answer.text %>
+          </label>
+
+          <input type="checkbox" name="question[<%= question.id %>]" id="question_<%= question.id %>_answer_<%= answer.id %>" />
+          <br />
+        <% end %>
+      </fieldset>
+    <% end %>
+  </form>
+</div>
+
