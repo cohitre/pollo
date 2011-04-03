@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'dm-core', '~> 1.1.0'
   s.add_runtime_dependency 'dm-migrations', '~> 1.1.0'
-  s.add_runtime_dependency 'dm-postgres-adapter', '~> 1.1.0'
+  s.add_runtime_dependency 'dm-validations', '~> 1.1.0'
   s.add_development_dependency 'sinatra', '1.2.1'
   s.add_development_dependency "rspec", '~> 2.5.0'
   s.add_development_dependency 'capybara', '~> 0.4.1'
