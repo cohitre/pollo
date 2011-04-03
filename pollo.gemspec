@@ -17,7 +17,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency "sinatra", '~> 1.2.1'
+  s.add_runtime_dependency 'dm-core', '~> 1.1.0'
+  s.add_runtime_dependency 'dm-migrations', '~> 1.1.0'
+  s.add_runtime_dependency 'dm-postgres-adapter', '~> 1.1.0'
+  s.add_development_dependency 'sinatra', '1.2.1'
   s.add_development_dependency "rspec", '~> 2.5.0'
-  s.add_development_dependency 'rack-test', '~> 0.5.7'
+  s.add_development_dependency 'capybara', '~> 0.4.1'
 end
