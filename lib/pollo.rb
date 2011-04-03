@@ -18,7 +18,7 @@ module Pollo
 
   def configure
     yield configuration
-    setup!
+    ensure_setup
   end
 
   def define_poll(name, &block)
@@ -27,8 +27,10 @@ module Pollo
 
   private
 
-    def setup!
+    def ensure_setup
+      return if @setup_performed
       DataMapper.setup(:default, configuration.db_connection_string)
       DataMapper.auto_upgrade!
+      @setup_performed = true
     end
 end
